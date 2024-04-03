@@ -43,6 +43,8 @@ h1{
     background: none;
     border: none;
     align-self: flex-end;
+    position: relative;
+    z-index: 100;
 }
 
 p{
