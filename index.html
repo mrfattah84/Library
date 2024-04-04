@@ -14,22 +14,19 @@
 <body>
     <h1>Amir's Library</h1>
     <button class="AddBook"><i class="material-icons">add_circle_outline</i> Add Book</button>
-    <div class="booksContainer">
-        <div class="book">
-            <button class="remove"><i class="material-icons">cancel</i></button>
-            <h3 class="title">somebook</h3>
-            <p class="author">Author: someone</p>
-            <p class="pages">Number of pages: 5554</p>
-            <p class="green status"><button class="statusChange"><i class="green material-icons">check_circle</i></button><span class="statusText">Already read</span></p>
-        </div>
-        <div class="book">
-            <button class="remove"><i class="material-icons">cancel</i></button>
-            <h3 class="title">somebook</h3>
-            <p class="author">Author: someone</p>
-            <p class="pages">Number of pages: 5554</p>
-            <p class="red status"><button class="statusChange"><i class="grey material-icons">check_circle</i></button><span class="statusText">Haven't read yet</span></p>
-        </div>
-    </div>
+    <div class="booksContainer"></div>
+    <dialog>
+        <h3>Adding Book.</h3>
+        <button type="button" class="close"><i class="material-icons">cancel</i></button>
+        <form method="dialog">
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <input type="number" name="pages" id="pages" placeholder="Pages" required>
+            <span>Did you already read this book?</span>
+            <input type="checkbox" name="read" id="read" class="read">
+            <button type="submit" class="confirmBtn">Add</button>
+        </form>
+    </dialog>
     <script src="app.js"></script>
 </body>
 </html>
